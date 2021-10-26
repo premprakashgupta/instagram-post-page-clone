@@ -1,0 +1,654 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+  --bgcolor: #fafafa;
+    --bordercolor: #dbdbdb;
+}
+body{
+    background-color: var(--bgcolor);
+    overflow-x: hidden;
+    position: relative;
+}
+.container-fluid{
+    background-color: var(--bgcolor);
+}
+.container-fluid header{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-top: 1px var(--bordercolor) solid;
+    border-bottom: 1px var(--bordergcolor) solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.container-fluid header navbar{
+    width: 100%;
+    height: 100%;
+}
+.container-fluid header navbar nav{
+    width: 59.89vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.container-fluid header navbar nav .search_bar{
+    width: auto;
+    height: auto;
+    background-color: var(--bgcolor);
+    padding: 0 .5rem;
+    border: var(--bordercolor) 1px solid;
+    border-radius: 5px;
+}
+.container-fluid header navbar nav .search_bar .fa-search{
+    font-size: .7rem;
+    margin-right: .3rem;
+    color: var(--bordercolor);
+    
+}
+.container-fluid header navbar nav .search_bar input[type="search"]{
+    border: none;
+    outline: none;
+    background-color: var(--bgcolor);
+    font-family: 'poppins','sans-serif';
+    font-size: .9rem;
+    line-height: .9rem;
+}
+.container-fluid header navbar nav .menu_section{
+    width: 210px;
+    height: 100%;
+    
+}
+.container-fluid header navbar nav .menu_section ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-fluid header navbar nav .menu_section ul li img{
+    width: 25px;
+}
+.container-fluid header navbar nav .menu_section ul li:last-child{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: var(--bgcolor);
+    position: relative;
+    cursor: pointer;
+}
+.container-fluid header navbar nav .menu_section ul li:last-child img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section{
+    width: auto;
+    height: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.23),-2px -2px 5px rgba(0, 0, 0, 0.23);
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+    display: none;
+    border-radius: 5px;
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotateZ(45deg);
+    position: absolute;
+    top: -10px;
+    right: 7px;
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.13);
+    z-index: 1;
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section li{
+    width: 240px;
+    height: auto;
+    padding: .5rem .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section li i{
+    width: 40px;
+    height: 100%;
+    font-size: 1.2rem;
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section li a{
+    color: #000;
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section li:last-child{
+    border-radius: 0 0 5px 5px;
+    border-top: 1px var(--bordercolor) solid;
+    
+}
+.container-fluid header navbar nav .menu_section ul li .profile_section li:hover{
+    background-color: var(--bgcolor);
+}
+section{
+    width: 59.89vw;
+    height: auto;
+    margin: 65px auto 0 auto;;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+}
+/*for status----------------------------*/
+
+.status_box{
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    border: 1px var(--bordercolor) solid;
+}
+
+.status_box .status{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    white-space: nowrap;
+  overflow-x:scroll;
+   
+}
+.status_box .status::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.status_box .status ul{
+    width: auto;
+    height: 100%;
+    display: flex;
+    background-color: transparent;
+    padding-right: 10px;
+}
+.status_box .status ul li{
+    width: 64px;
+    height: 100%;
+/*   border: 2px red solid;*/
+    margin: 0 .2rem;
+    padding: .2rem 0;
+    
+    
+}
+section .status_box .status ul li .statusimg_background{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );*/
+    border-radius: 100%;
+    width: auto;
+    height: auto;
+    padding: 2px;
+}
+
+section .status_box .status ul li .statusimg_background img{
+    width: 58px;
+    height: 58px;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+/*    margin: 2px;*/
+}
+section .status_box .status ul li span{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
+    font-size: .8rem;
+    padding: 0 .2rem;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+#left,#right{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow:  2px 2px 5px rgba(51, 51, 51, 0.38), -2px -2px 5px  rgba(51, 51, 51, 0.38);
+    cursor: pointer;
+}
+#right{
+    right: 0;
+    margin-right: 5px;
+}
+#left{
+    left: 0;
+    margin-left: 5px;
+}
+#left i,#right i{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 1rem;
+    color: rgba(219, 213, 213, 1);
+    background-color: #fff;
+    border-radius: 100%;
+}
+/*status end-----------------------*/
+
+
+/* for post content-------------------------------------------------------------------- */
+section .post_section{
+ 
+    width: 40.35vw ;
+    height: auto;
+     
+   
+/*    overflow-y: scroll;*/
+}
+section .post_section .post_collection{
+    width: 100%;
+    height: auto;
+    border: var(--bordercolor) 1px solid;
+    margin: 20px 0;
+     background-color: #fff;
+    border-radius: 5px;
+}
+section .post_section .post_collection .head_section{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .post_section .post_collection .head_section span{
+    width: 160px;
+    height: 100%;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .post_section .post_collection .head_section span .head_pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: var(--bgcolor);
+    margin-right: 1rem;
+}
+section .post_section .post_collection .head_section span .head_pic img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 100%;
+}
+section .post_section .post_collection .head_section span .head_name{
+    width: auto;
+    height: 100%;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .post_section .post_collection .head_section .three_dot{
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+section .post_section .post_collection .post_content{
+    width: 100%;
+    height: 600px;
+    background-color: var(--bgcolor);
+    position: relative;
+}
+.glowheart{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+}
+.glowheart i{
+    color: rgba(255, 255, 255, 0.36);
+    animation:  .8s glow 1;
+    transition: .8s;
+    
+}
+@keyframes glow{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    25%{
+        transform: scale(1);
+        opacity: .5;
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.16),-1px -1px 3px rgba(255, 255, 255, 0.16);
+    }
+    50%{
+        transform: scale(2);
+        opacity: 1;
+        text-shadow: 1.5px 1.5px 3px rgba(255, 255, 255, 0.36),-1.5px -1.5px 3px rgba(255, 255, 255, 0.36);
+    }
+    75%{
+        transform: scale(3);
+        opacity: .5;
+        text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.56),-1px -1px 5px rgba(255, 255, 255, 0.56);
+    }
+    100%{
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+section .post_section .post_collection .post_content img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
+section .post_section .post_collection .like_cmt_share_section{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+section .post_section .post_collection .like_cmt_share{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+section .post_section .post_collection .like_cmt_share i{
+    width: 30px;
+    height: 100%;
+    margin: 0 5px;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 40px;
+}
+section .post_section .post_collection .like_cmt_share_section .save_post i{
+     width: 30px;
+    height: 100%;
+    margin: 0 5px;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 40px;
+}
+section .post_section .post_collection .like_count{
+    width: 100%;
+    height: auto;
+    padding: 0 .5rem;
+}
+section .post_section .post_collection .post_description{
+    width: 100%;
+    height: auto;
+/*    background-color: red;*/
+    padding: .5rem;
+}
+section .post_section .post_collection .post_description p{
+   overflow: hidden !important;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+section .post_section .post_collection .post_description .whitespace{
+    white-space: normal !important;
+}
+section .post_section .post_collection .post_description #more{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin-top: 0;
+    cursor: pointer;
+/*    background-color: ;*/
+}
+section .post_section .post_collection hr{
+    margin: 4px;
+}
+section .post_section .post_collection .comment{
+    width: 100%;
+    height: 60px;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .post_section .post_collection .comment .comment_input i{
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 1.8rem;
+    line-height: 60px;
+}
+section .post_section .post_collection .comment .comment_input input{
+    border: none;
+    outline: none;
+}
+section .post_section .post_collection .comment button{
+    background-color: transparent;
+    color: skyblue;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* owner prfile css-------------------------------------------------------------------------------------------- */
+
+
+
+
+
+.owner_profile_section{
+   
+    width: 19.53vw;
+    height: calc(100vh - 90px);
+    position: fixed;
+    background-color: transparent;
+    top: 86px;
+    left: 62%;
+    padding: 1rem;
+/*    background-color: yellow;*/
+    z-index: 1;
+}
+.owner_profile_section span{
+    width: auto;
+    height: auto;
+    font-weight: 600;
+    display: block;
+    color: #909090;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .9rem;
+}
+.owner_profile_section .user_profile{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+/*    background-color: red;*/
+}
+.owner_profile_section .user_profile a{
+    font-weight: 600;
+    font-size: .85rem;
+}
+.owner_profile_section .user_profile .user_profile_box{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.owner_profile_section .user_profile .user_profile_box .user_pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+.owner_profile_section .user_profile .user_profile_box .user_pic img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+}
+.owner_profile_section .user_profile .user_profile_box .user_name{
+    padding-top: 1.5rem;
+}
+.owner_profile_section .user_profile .user_profile_box .user_name a{
+    font-weight: 600;
+    color: #000;
+    width: auto;
+    height: auto;
+     font-size: .9rem;
+}
+.owner_profile_section .user_profile .user_profile_box .user_name a:hover{
+    text-decoration: none;
+}
+.owner_profile_section .user_profile .user_profile_box .user_name p{
+    font-size: .9rem;
+}
+
+.owner_profile_section .suggestion .suggestion_profile{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+/*    background-color: red;*/
+}
+.owner_profile_section .suggestion .suggestion_profile .suggestion_profile_box{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.owner_profile_section .suggestion .suggestion_profile .suggestion_profile_box .suggestion_pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+.owner_profile_section .suggestion .suggestion_profile .suggestion_profile_box .suggestion_pic img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+}
+.owner_profile_section .suggestion .suggestion_profile a{
+    font-weight: 600;
+    font-size: .85rem;
+}
+.owner_profile_section .suggestion_profile .suggestion_profile_box .suggestion_name{
+    padding-top: 1.5rem;
+}
+.owner_profile_section .suggestion .suggestion_profile .suggestion_profile_box .suggestion_name a{
+    font-weight: 600;
+    color: #000;
+    width: auto;
+    height: auto;
+     font-size: .9rem;
+}
+.owner_profile_section .suggestion .suggestion_profile .suggestion_profile_box .suggestion_name a:hover{
+    text-decoration: none;
+}
+.owner_profile_section .suggestion .suggestion_profile .suggestion_name p{
+    font-size: .8rem;
+}
+.owner_profile_section_lower_part{
+    width: 100%;
+    height: auto;
+    
+}
+.owner_profile_section_lower_part .link{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+.owner_profile_section_lower_part .link ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.owner_profile_section_lower_part .link ul li{
+    width: auto;
+    height: auto;
+    padding: .2rem;
+  
+    text-align: center;
+    color: #909090;
+}
+.owner_profile_section_lower_part .link ul li a{
+     font-size: .7rem;
+    font-weight: 600;
+    color: #909090;
+     text-align: center;
+}
+.owner_profile_section_lower_part .copy_right{
+    width: 100%;
+    height: auto;
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 1150px)
+{
+	section{
+        width: 100%;
+    }
+    section .post_section{
+        width: 100%;
+    }
+    .owner_profile_section{
+        display: none;
+    }
+    .container-fluid header navbar nav .menu_section{
+        display: none;
+    }
+    .container-fluid header navbar nav .search_bar{
+        display: none;
+    }
+    .owner_profile_section .user_profile .user_profile_box{
+        flex-direction: column;
+    }
+    .owner_profile_section .suggestion .suggestion_profile .suggestion_profile_box{
+        flex-direction: column;
+    }
+}
